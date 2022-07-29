@@ -12,14 +12,10 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body class="backgraund">
-      <h1 class="title">Список категорий</h1>
-      <hr>
-      <div class="row">
-      {% for sun in categories %}
-          <div class="col-3 category">
-          <h3 ><a class="cat" href="/categories/{{ sun.id }}">{{ sun.name }}</a></h3>
-          </div>
-      {% endfor %}
-      </div>
+     <h1 class="title">{{ category.name }}</h1>
+     <hr>
+     <b>
+       Описание: {{ category.description }}
+     </b>
 </body>
 </html>

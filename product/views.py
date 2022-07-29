@@ -15,3 +15,13 @@ def Category(request):
     context = {"categories": categories}
     return render(request, "categories.html", context)
 
+
+def categories_info(request, id):
+    category = Categories.objects.get(id=id)
+    context = {"category": category}
+    return render(request, "category_info.html", context)
+
+
+def Buy(request):
+    return render(request, "index.html")
+
