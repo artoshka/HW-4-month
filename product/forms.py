@@ -3,8 +3,8 @@ from django.contrib.auth.models import User
 
 
 class RegistrationForm(forms.ModelForm):
-    password = forms.CharField(label='Пороль', widget=forms.PasswordInput)
-    password_2 = forms.CharField(label='Поворите пороль', widget=forms.PasswordInput)
+    password = forms.CharField(label='Пароль', widget=forms.PasswordInput)
+    password_2 = forms.CharField(label='Повторите пароль', widget=forms.PasswordInput)
 
     class Meta:
         model = User
@@ -13,5 +13,5 @@ class RegistrationForm(forms.ModelForm):
     def clean_password_2(self):
         cd = self.cleaned_data
         if cd['password'] != cd['password_2']:
-            raise forms.ValidationError('Пороли не похожи!')
+            raise forms.ValidationError('Пароли не похожи!')
         return cd['password_2']
