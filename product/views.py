@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from .models import Foods, Categories
+from django.views.generic import ListView, DetailView
+from django.contrib.auth.decorators import login_required
+from .models import Foods, Categories, Pricing
 from .forms import RegistrationForm
 
 
@@ -23,8 +25,8 @@ def categories_info(request, id):
     return render(request, "product/category_info.html", context)
 
 
-def Buy(request):
-    return render(request, "product/index.html")
+#def Buy(request):
+    #return render(request, "product/index.html")
 
 
 def register(request):
@@ -38,4 +40,21 @@ def register(request):
     else:
         user_form = RegistrationForm()
     return render(request, 'product/register.html', {'user_form': user_form})
+
+
+class PricingListView(ListView):
+    model = Pricing
+    template_name = "product/index.html"
+
+
+class PricingDetail(DetailView):
+    model = Pricing
+    template_name = "product/indexDetail.html"
+
+@login_required()
+def about(request):
+    return render(request, "product/about.html")
+
+
+
 

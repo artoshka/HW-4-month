@@ -10,30 +10,19 @@
   margin-top: 100px;
 }
 
-.col_right {
+
+.col_cumchatka {
   box-shadow: 0 9px 8px 0 rgba(14, 6, 6, 0.2);
   background-color:  #ffffff;
-  text-align: center;
-  margin-left: 50px;
-  border-width: 300px;
-   border-top: 2px solid #5c94ea;
+  margin-left: 100px;
+  border-top: 2px solid #5c94ea;
 }
 
-
-.col_center {
+.col_salatik {
   box-shadow: 0 9px 8px 0 rgba(14, 6, 6, 0.2);
   background-color:  #ffffff;
-  text-align: center;
-  margin-left: 50px;
-   border-top: 2px solid #5c94ea;
-}
-
-.col_left {
-  box-shadow: 0 9px 8px 0 rgba(14, 6, 6, 0.2);
-  background-color:  #ffffff;
-  text-align: center;
-  margin-left: 300px;
-   border-top: 2px solid #5c94ea;
+  margin-left: 150px;
+  border-top: 2px solid #5c94ea;
 }
 
 
@@ -105,3 +94,7 @@
   margin-left: 100px;
    border-top: 2px solid #5c94ea;
 }
+
+
+
+
